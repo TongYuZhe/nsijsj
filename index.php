@@ -1,17 +1,12 @@
 <?php require_once 'header.php' ?>
+<?php require_once 'class/get.class.php' ?>
 <div style="background:#f1f1f1;">
     <div class="bg">
         <div class="mass">
             <div class="banner-wrap">
                 <div class="swiper-container">
                     <ul class="swiper-wrapper">
-                    <?php 
-						$getid = get_cat_ID('图片');
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        query_posts('&showposts=' .$limit = '8'. '&paged=' . $paged . '&cat='.$getid);
-                        $wp_query->is_archive = true;
-                        $wp_query->is_home = false;
-                    ?>
+                    <?php new news('图片','8'); ?>
                     
                     <?php while( have_posts() ) : the_post(); ?>
                         <li class="swiper-slide"><img src="<?php echo catch_that_image(); ?>"></li>
@@ -55,13 +50,7 @@
                         <p class="b2"><a href="/xbbk"><img src="/wp-content/themes/nsijsj/images/index_17.jpg" width="12" height="12" /></a></p>
                     </li>
                     <li><img src="/wp-content/themes/nsijsj/images/index_21.jpg" width="321" height="3" /></li>
-                    <?php $getid = get_cat_ID('系部博客'); ?>
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        query_posts('&showposts=' .$limit = '2'. '&paged=' . $paged . '&cat='.$getid);
-                        $wp_query->is_archive = true;
-                        $wp_query->is_home = false;
-                    ?>
+                    <?php new news('系部博客','2'); ?>
 					<?php /*wp_list_categories('include=2&title_li=&style=none');*/ ?><!-- 分类名 -->
 					<?php while( have_posts() ) : the_post(); ?>
                         <li class="bc">
@@ -78,13 +67,7 @@
                         <p class="b2"><a href="/xbdt"><img src="/wp-content/themes/nsijsj/images/index_17.jpg" width="12" height="12" /></a></p>
                     </li>
                     <li><img src="/wp-content/themes/nsijsj/images/index_21.jpg" width="321" height="3" /></li>
-                    <?php $getid = get_cat_ID('系部动态'); ?>
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        query_posts('&showposts=' .$limit = '2'. '&paged=' . $paged . '&cat='.$getid);
-                        $wp_query->is_archive = true;
-                        $wp_query->is_home = false;
-                    ?>
+                    <?php new news('系部','2'); ?>
 					<?php /*wp_list_categories('include=2&title_li=&style=none');*/ ?><!-- 分类名 -->
 					<?php while( have_posts() ) : the_post(); ?>
                         <li class="bc">
@@ -101,13 +84,7 @@
                         <p class="b2"><a href="/xbjs"><img src="/wp-content/themes/nsijsj/images/index_17.jpg" width="12" height="12" /></a></p>
                     </li>
                     <li class="mas"><img src="/wp-content/themes/nsijsj/images/index_21.jpg" width="321" height="3" /></li>
-                    <?php $getid = get_cat_ID('系部介绍'); ?>
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        query_posts('&showposts=' .$limit = '1'. '&paged=' . $paged . '&cat='.$getid);
-                        $wp_query->is_archive = true;
-                        $wp_query->is_home = false;
-                    ?>
+                    <?php new news('系部介绍','1'); ?>
 					<?php /*wp_list_categories('include=2&title_li=&style=none');*/ ?><!-- 分类名 -->
 					<?php while( have_posts() ) : the_post(); ?>
                         <li class="lvz"><img class="iw" src="<?php echo catch_that_image() ?>" width="97" height="86" /><?php the_content(); ?></li>
@@ -143,13 +120,7 @@
                         <p class="b2"><a href="/jsjs"><img src="/wp-content/themes/nsijsj/images/index_17.jpg" width="12" height="12" /></a></p>
                     </li>
                     <li><img src="/wp-content/themes/nsijsj/images/index_21.jpg" width="321" height="3" /></li>
-                    <?php $getid = get_cat_ID('教师介绍'); ?>
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        query_posts('&showposts=' .$limit = '3'. '&paged=' . $paged . '&cat='.$getid);
-                        $wp_query->is_archive = true;
-                        $wp_query->is_home = false;
-                    ?>
+                    <?php new news('教师介绍','3'); ?>
 					<?php /*wp_list_categories('include=2&title_li=&style=none');*/ ?><!-- 分类名 -->
 					<?php while( have_posts() ) : the_post(); ?>
                         <li class="eap">
@@ -171,13 +142,7 @@
                         <p class="b2"><a href="/zyjs"><img src="/wp-content/themes/nsijsj/images/index_17.jpg" width="12" height="12" /></a></p>
                     </li>
                     <li><img src="/wp-content/themes/nsijsj/images/index_21.jpg" width="321" height="3" /></li>
-                    <?php $getid = get_cat_ID('专业介绍'); ?>
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        query_posts('&showposts=' .$limit = '3'. '&paged=' . $paged . '&cat='.$getid);
-                        $wp_query->is_archive = true;
-                        $wp_query->is_home = false;
-                    ?>
+                    <?php new news('专业介绍','3'); ?>
 					<?php /*wp_list_categories('include=2&title_li=&style=none');*/ ?><!-- 分类名 -->
 					<?php while( have_posts() ) : the_post(); ?>
                         <li class="bc">
