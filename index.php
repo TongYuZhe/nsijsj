@@ -1,4 +1,4 @@
-<?php require_once 'header.php' ?>
+<?php get_header(); ?>
 <?php require_once 'class/get.class.php' ?>
 <div style="background:#f1f1f1;">
     <div class="bg">
@@ -155,7 +155,7 @@
             <div class="clear"></div>
         </div>
         </div>
-        <?php require_once 'footer.php' ?>
+        <?php get_footer(); ?>
 	</div>
 </div>
 </body>
